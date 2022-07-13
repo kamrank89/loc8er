@@ -18,8 +18,8 @@ router
 router.route("/locations/:locationid/reviews").post(ctrlReviews.reviewsCreate);
 router
   .route("/locations/:locationid/reviews/:reviewid")
-  .get(ctrlReviews.reviewsReadOne)
-  .put(ctrlReviews.reviewsUpdateOne)
-  .delete(ctrlReviews.reviewsDeleteOne);
+  .get(ctrlReviews.reviewsReadOne);
+// .put(ctrlReviews.reviewsUpdateOne)
+// .delete(ctrlReviews.reviewsDeleteOne);
 
 module.exports = router;
