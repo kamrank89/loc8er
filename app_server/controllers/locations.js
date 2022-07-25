@@ -1,5 +1,9 @@
 const request = require("request");
-const homelist = (req, res) => {
+const apiOptions = {
+  server: "http://localhost:3000",
+};
+
+const renderHomepage = (req, res) => {
   res.render("locations-list", {
     title: "Loc8r - find a place to work with wifi",
     pageHeader: {
@@ -32,6 +36,10 @@ const homelist = (req, res) => {
       },
     ],
   });
+};
+
+const homelist = (req, res) => {
+  renderHomepage(req, res);
 };
 
 const locationInfo = (req, res) => {
